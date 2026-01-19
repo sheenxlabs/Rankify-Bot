@@ -1,4 +1,3 @@
-```python
 import os, json, random, telebot, firebase_admin
 from firebase_admin import credentials, firestore
 
@@ -27,4 +26,4 @@ def handle_contact(message):
         bot.send_message(message.chat.id, f"✅ Verification Successful!\n\nYour Access PIN: {pin}\n\nIse App mein enter karein.")
 
 bot.infinity_polling()
-```
+
