@@ -20,4 +20,3 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
         run: python bot.py
-
