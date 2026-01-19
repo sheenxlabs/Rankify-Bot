@@ -1,0 +1,21 @@
+name: Rankify Bot Runner
+on:
+  schedule:
+    - cron: '0 */5 * * *'
+  workflow_dispatch:
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install Libs
+        run: pip install pyTelegramBotAPI firebase-admin
+      - name: Start Bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
+        run: python bot.py
