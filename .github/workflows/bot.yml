@@ -1,4 +1,4 @@
-```yaml
+```yml
 name: Rankify Bot Runner
 on:
   schedule:
